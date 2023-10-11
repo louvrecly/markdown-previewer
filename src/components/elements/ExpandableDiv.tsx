@@ -8,7 +8,7 @@ export interface ExpandableDivProps {
 const ExpandableDiv = styled(Div)<ExpandableDivProps>`
   height: 100%;
   transition: max-height 0.3s ease;
-  max-height: ${(props) => (props.$isExpanded ? 500 : 0)}px;
+  max-height: ${({ $isExpanded }) => ($isExpanded ? 500 : 0)}px;
   overflow: hidden;
 `;
 

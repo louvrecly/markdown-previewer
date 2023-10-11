@@ -31,43 +31,49 @@ export interface DivProps {
   $justifyContent?: JustifyContent;
   $alignItems?: AlignItems;
   $gap?: number;
+  $background?: string;
 }
 
 const Div = styled.div<DivProps>`
-  ${(props) =>
-    props.$margin &&
+  ${({ $margin }) =>
+    $margin &&
     css`
-      margin: ${props.$margin};
+      margin: ${$margin};
     `}
-  ${(props) =>
-    props.$padding &&
+  ${({ $padding }) =>
+    $padding &&
     css`
-      padding: ${props.$padding};
+      padding: ${$padding};
     `}
-  ${(props) =>
-    props.$isFlex &&
+  ${({ $isFlex }) =>
+    $isFlex &&
     css`
       display: flex;
     `}
-  ${(props) =>
-    props.$flexFlow &&
+  ${({ $flexFlow }) =>
+    $flexFlow &&
     css`
-      flex-flow: ${props.$flexFlow};
+      flex-flow: ${$flexFlow};
     `}
-  ${(props) =>
-    props.$justifyContent &&
+  ${({ $justifyContent }) =>
+    $justifyContent &&
     css`
-      justify-content: ${props.$justifyContent};
+      justify-content: ${$justifyContent};
     `}
-  ${(props) =>
-    props.$alignItems &&
+  ${({ $alignItems }) =>
+    $alignItems &&
     css`
-      align-items: ${props.$alignItems};
+      align-items: ${$alignItems};
     `}
-  ${(props) =>
-    props.$gap &&
+  ${({ $gap }) =>
+    $gap &&
     css`
-      gap: ${props.$gap}px;
+      gap: ${$gap}px;
+    `}
+  ${({ $background }) =>
+    $background &&
+    css`
+      background: ${$background};
     `}
 `;
 
