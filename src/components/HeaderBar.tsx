@@ -22,6 +22,7 @@ const HeaderBar = ({ title }: HeaderBarProps) => {
         $justifyContent="space-between"
         $alignItems="stretch"
         $gap={10}
+        $background="seagreen"
       >
         <h1>{title}</h1>
 
