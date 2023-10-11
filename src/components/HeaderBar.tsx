@@ -1,16 +1,37 @@
-import Bar from './blocks/Bar';
+import { useState } from 'react';
+import Div from './elements/Div';
+import ExpandableDiv from './elements/ExpandableDiv';
+import CheatSheet from './CheatSheet';
 
 interface HeaderBarProps {
   title: string;
 }
 
 const HeaderBar = ({ title }: HeaderBarProps) => {
-  return (
-    <Bar>
-      <Bar.Title>{title}</Bar.Title>
+  const [isCheatSheetExpanded, setIsCheatSheetExpanded] = useState(false);
+  const handleToggle = () => {
+    setIsCheatSheetExpanded((isExpanded) => !isExpanded);
+  };
 
-      <Bar.Button>Cheat Sheet</Bar.Button>
-    </Bar>
+  return (
+    <Div $isFlex $flexFlow="column nowrap" $alignItems="stretch">
+      <Div
+        $padding="10px 30px"
+        $isFlex
+        $flexFlow="row wrap"
+        $justifyContent="space-between"
+        $alignItems="stretch"
+        $gap={10}
+      >
+        <h1>{title}</h1>
+
+        <button onClick={handleToggle}>Cheat Sheet</button>
+      </Div>
+
+      <ExpandableDiv $isExpanded={isCheatSheetExpanded}>
+        <CheatSheet />
+      </ExpandableDiv>
+    </Div>
   );
 };
 
