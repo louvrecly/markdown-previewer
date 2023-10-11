@@ -4,6 +4,7 @@ import {
   TextareaHTMLAttributes,
 } from 'react';
 import { IStyledComponent, styled } from 'styled-components';
+import { Options } from 'react-markdown';
 import FlexDiv, { FlexDivProps } from '../../elements/FlexDiv';
 import Editor from './Editor';
 import Previewer from './Previewer';
@@ -20,10 +21,8 @@ interface PanelBlock extends IStyledComponent<'web', PanelProps> {
       HTMLTextAreaElement
     >
   >;
-  Previewer: IStyledComponent<
-    'web',
-    DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>
-  >;
+  Previewer: IStyledComponent<'web', Readonly<Options>> &
+    ((options: Readonly<Options>) => JSX.Element);
 }
 
 const Panel: PanelBlock = styled(FlexDiv)`
