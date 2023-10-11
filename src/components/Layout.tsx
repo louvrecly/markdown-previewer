@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
-import FlexDiv from './elements/FlexDiv';
+import Div from './elements/Div';
 
-const Layout = styled(FlexDiv)`
+const Layout = styled(Div)`
   min-height: 100vh;
 `;
 

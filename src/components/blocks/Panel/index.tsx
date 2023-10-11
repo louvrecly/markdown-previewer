@@ -5,13 +5,13 @@ import {
 } from 'react';
 import { IStyledComponent, styled } from 'styled-components';
 import { Options } from 'react-markdown';
-import FlexDiv, { FlexDivProps } from '../../elements/FlexDiv';
+import Div, { DivProps } from '../../elements/Div';
 import Editor from './Editor';
 import Previewer from './Previewer';
 
 interface PanelProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
-    FlexDivProps {}
+    DivProps {}
 
 interface PanelBlock extends IStyledComponent<'web', PanelProps> {
   Editor: IStyledComponent<
@@ -25,8 +25,7 @@ interface PanelBlock extends IStyledComponent<'web', PanelProps> {
     ((options: Readonly<Options>) => JSX.Element);
 }
 
-const Panel: PanelBlock = styled(FlexDiv)`
-  margin: 10px;
+const Panel: PanelBlock = styled(Div)`
   flex: 1;
 `;
 
