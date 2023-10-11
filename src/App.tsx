@@ -1,9 +1,9 @@
-function App() {
+import HeaderBar from './components/HeaderBar';
+
+const App = () => {
   return (
-    <>
-      <h1>hello world</h1>
-    </>
+    <HeaderBar title="Markdown Previewer" />
   );
-}
+};
 
 export default App;
