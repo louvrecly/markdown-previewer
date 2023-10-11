@@ -12,6 +12,7 @@ const FlexDiv = styled.div<FlexDivProps>`
   justify-content: space-between;
   align-items: ${(props) => props.$alignItems || 'center'};
   gap: ${(props) => props.$gap || 0}px;
+  flex-wrap: wrap;
 `;
 
 export default FlexDiv;
