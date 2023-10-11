@@ -1,11 +1,18 @@
+import { useState } from 'react';
 import Panel from './blocks/Panel';
 
 const Body = () => {
+  const [markdown, setMarkdown] = useState('');
+
+  const handleInput = (event: React.FormEvent<HTMLTextAreaElement>) => {
+    setMarkdown(event.currentTarget.value);
+  };
+
   return (
     <Panel $alignItems="stretch" $gap={10}>
-      <Panel.Editor />
+      <Panel.Editor onInput={handleInput} />
 
-      <Panel.Previewer>Previewer</Panel.Previewer>
+      <Panel.Previewer>{markdown}</Panel.Previewer>
     </Panel>
   );
 };
