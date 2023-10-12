@@ -5,7 +5,7 @@ import Body from './components/Body';
 const App = () => {
   return (
     <Layout $isFlex $flexFlow="column nowrap" $alignItems="stretch">
-      <HeaderBar title="Markdown Previewer" />
+      <HeaderBar title="📝 Markdown Previewer" />
 
       <Body />
     </Layout>
