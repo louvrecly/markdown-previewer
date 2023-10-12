@@ -34,6 +34,7 @@ export interface DivProps {
   $background?: string;
   $position?: Position;
   $inset?: string;
+  $fontMono?: boolean;
 }
 
 const Div = styled.div<DivProps>`
@@ -89,6 +90,11 @@ const Div = styled.div<DivProps>`
     $inset &&
     css`
       inset: ${$inset};
+    `}
+  ${({ $fontMono }) =>
+    $fontMono &&
+    css`
+      font-family: 'Roboto Mono', monospace;
     `}
 `;
 
