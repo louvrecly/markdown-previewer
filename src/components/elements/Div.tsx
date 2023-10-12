@@ -17,6 +17,7 @@ type AlignItems =
   | 'start'
   | 'end'
   | 'baseline';
+type Position = 'static' | 'relative' | 'fixed' | 'absolute' | 'sticky';
 
 const generateFlexFlow = (flexDirection: FlexDirection, flexWrap: FlexWrap) =>
   flexDirection + ' ' + flexWrap;
@@ -32,6 +33,8 @@ export interface DivProps {
   $alignItems?: AlignItems;
   $gap?: number;
   $background?: string;
+  $position?: Position;
+  $inset?: string;
 }
 
 const Div = styled.div<DivProps>`
@@ -74,6 +77,16 @@ const Div = styled.div<DivProps>`
     $background &&
     css`
       background: ${$background};
+    `}
+  ${({ $position }) =>
+    $position &&
+    css`
+      position: ${$position};
+    `}
+  ${({ $inset }) =>
+    $inset &&
+    css`
+      inset: ${$inset};
     `}
 `;
 

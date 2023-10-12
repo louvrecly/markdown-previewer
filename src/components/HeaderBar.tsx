@@ -14,7 +14,7 @@ const HeaderBar = ({ title }: HeaderBarProps) => {
   };
 
   return (
-    <Div $isFlex $flexFlow="column nowrap" $alignItems="stretch">
+    <Div $position="relative">
       <Div
         $padding="15px 30px"
         $isFlex
@@ -29,7 +29,12 @@ const HeaderBar = ({ title }: HeaderBarProps) => {
         <button onClick={handleToggle}>Cheat Sheet</button>
       </Div>
 
-      <ExpandableDiv $isExpanded={isCheatSheetExpanded}>
+      <ExpandableDiv
+        $isExpanded={isCheatSheetExpanded}
+        $background="rgba(0, 0, 0, 0.3)"
+        $position="absolute"
+        $inset="100% 0 auto"
+      >
         <CheatSheet />
       </ExpandableDiv>
     </Div>
