@@ -26,12 +26,8 @@ interface PanelBlock extends IStyledComponent<'web', PanelProps> {
 }
 
 const Panel: PanelBlock = styled(Div)`
-  padding: 15px 30px;
   flex: 1;
-  display: flex;
   flex-flow: column nowrap;
-  align-items: stretch;
-  gap: 15px;
 
   @media (min-width: 600px) {
     flex-flow: row-reverse nowrap;

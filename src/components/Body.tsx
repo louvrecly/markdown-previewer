@@ -11,7 +11,7 @@ const Body = () => {
   };
 
   return (
-    <Panel>
+    <Panel $hasPadding $isFlex $alignItems="stretch" $hasGap>
       <Panel.Previewer>{markdown}</Panel.Previewer>
 
       <Panel.Editor placeholder={PLACEHOLDER} onInput={handleInput} />

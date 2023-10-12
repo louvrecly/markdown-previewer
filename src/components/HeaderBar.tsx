@@ -16,12 +16,12 @@ const HeaderBar = ({ title }: HeaderBarProps) => {
   return (
     <Div $position="relative">
       <Div
-        $padding="15px 30px"
+        $hasPadding
         $isFlex
         $flexFlow="row wrap"
         $justifyContent="space-between"
         $alignItems="stretch"
-        $gap={15}
+        $hasGap
         $background="dodgerblue"
       >
         <h1>{title}</h1>
@@ -31,7 +31,7 @@ const HeaderBar = ({ title }: HeaderBarProps) => {
 
       <ExpandableDiv
         $isExpanded={isCheatSheetExpanded}
-        $background="rgba(0, 0, 0, 0.3)"
+        $background="rgba(0, 0, 0, 0.7)"
         $position="absolute"
         $inset="100% 0 auto"
       >

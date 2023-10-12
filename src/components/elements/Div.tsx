@@ -25,28 +25,26 @@ const generateFlexFlow = (flexDirection: FlexDirection, flexWrap: FlexWrap) =>
 type FlexFlow = ReturnType<typeof generateFlexFlow>;
 
 export interface DivProps {
-  $margin?: string;
-  $padding?: string;
+  $hasPadding?: boolean;
   $isFlex?: boolean;
   $flexFlow?: FlexFlow;
   $justifyContent?: JustifyContent;
   $alignItems?: AlignItems;
-  $gap?: number;
+  $hasGap?: boolean;
   $background?: string;
   $position?: Position;
   $inset?: string;
 }
 
 const Div = styled.div<DivProps>`
-  ${({ $margin }) =>
-    $margin &&
+  ${({ $hasPadding }) =>
+    $hasPadding &&
     css`
-      margin: ${$margin};
-    `}
-  ${({ $padding }) =>
-    $padding &&
-    css`
-      padding: ${$padding};
+      padding: 10px 30px;
+
+      @media (min-width: 600px) {
+        padding: 15px 50px;
+      }
     `}
   ${({ $isFlex }) =>
     $isFlex &&
@@ -68,10 +66,14 @@ const Div = styled.div<DivProps>`
     css`
       align-items: ${$alignItems};
     `}
-  ${({ $gap }) =>
-    $gap &&
+  ${({ $hasGap }) =>
+    $hasGap &&
     css`
-      gap: ${$gap}px;
+      gap: 10px;
+
+      @media (min-width: 600px) {
+        gap: 15px;
+      }
     `}
   ${({ $background }) =>
     $background &&
