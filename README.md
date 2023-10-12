@@ -1,27 +1,15 @@
-# React + TypeScript + Vite
+# 📝 Markdown Previewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple text editor for markdown (`.md`) documents with a live preview feature. It is built with React, TypeScript and Vite. The live demo can be previewed [here](https://markdown-previewer-teal.vercel.app/).
 
-Currently, two official plugins are available:
+## 💡Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This markdown previewer has a text editor for editing markdown (`.md`) documents. It comes with a live preview of the rendered view of the input text. There is also a button to toggle the cheat sheet of the markdown syntax.
 
-## Expanding the ESLint configuration
+## ⚙️ Tech Stacks
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- [<img src="src/assets/react.svg" alt="react" height="20" style="margin-right: 10px; vertical-align: middle">React](https://react.dev/)
+- [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="typescript" height="20"  style="margin-right: 10px; vertical-align: middle">TypeScript](https://www.typescriptlang.org/)
+- [<img src="public/vite.svg" alt="vite" height="20" style="margin-right: 10px; vertical-align: middle">Vite](https://vitejs.dev/)
+- [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" alt="markdown" height="20" style="margin-right: 10px; vertical-align: middle">`react-markdown`](https://github.com/remarkjs/react-markdown)
+- [<img src="https://styled-components.com/nav-logo.png" alt="styled-components" height="20" style="margin-right: 10px; vertical-align: middle">`styled-components`](https://styled-components.com/)
