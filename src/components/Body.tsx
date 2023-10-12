@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Panel from './blocks/Panel';
 
+const PLACEHOLDER = 'Start typing here # Hello World!';
+
 const Body = () => {
   const [markdown, setMarkdown] = useState('');
 
@@ -12,7 +14,7 @@ const Body = () => {
     <Panel>
       <Panel.Previewer>{markdown}</Panel.Previewer>
 
-      <Panel.Editor onInput={handleInput} />
+      <Panel.Editor placeholder={PLACEHOLDER} onInput={handleInput} />
     </Panel>
   );
 };
