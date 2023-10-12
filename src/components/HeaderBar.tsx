@@ -16,13 +16,13 @@ const HeaderBar = ({ title }: HeaderBarProps) => {
   return (
     <Div $isFlex $flexFlow="column nowrap" $alignItems="stretch">
       <Div
-        $padding="10px 30px"
+        $padding="15px 30px"
         $isFlex
         $flexFlow="row wrap"
         $justifyContent="space-between"
         $alignItems="stretch"
-        $gap={10}
-        $background="seagreen"
+        $gap={15}
+        $background="dodgerblue"
       >
         <h1>{title}</h1>
 

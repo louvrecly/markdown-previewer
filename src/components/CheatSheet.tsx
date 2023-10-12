@@ -15,7 +15,7 @@ const cheatSheetItems = [
 
 const CheatSheet = () => {
   return (
-    <Div $padding="10px 30px 0">
+    <Div $padding="15px 30px 0">
       <h2>Markdown Cheat Sheet</h2>
 
       <ul>

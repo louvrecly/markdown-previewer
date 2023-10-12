@@ -9,7 +9,7 @@ const Body = () => {
   };
 
   return (
-    <Panel $padding="10px 30px" $isFlex $alignItems="stretch" $gap={10}>
+    <Panel $padding="15px 30px" $isFlex $alignItems="stretch" $gap={15}>
       <Panel.Editor onInput={handleInput} />
 
       <Panel.Previewer>{markdown}</Panel.Previewer>
